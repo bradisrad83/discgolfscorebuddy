@@ -1,1 +1,2 @@
 # discgolfscorebuddy
+This application will basically be a udisc clone that will allow users to create a login so that they may keep score at local disc golf courses.  Unlike uDIsc I will not be able to use there API so all courses will have to be manually entered throught the application by the user.  Once a course is entered once it will be saved and loading it in the future will be much easier.  Users can view there recorded rounds and if all goes will I'd like to add some type of forum for course/gear/disc reviews.  
