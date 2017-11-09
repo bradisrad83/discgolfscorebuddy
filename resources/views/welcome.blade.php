@@ -5,12 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>DiscGolfScoreBuddy</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+
         <!-- Styles -->
+        <link href="/css/style.css" rel="stylesheet">
         <style>
             html, body {
                 background: url("/images/background.jpg");
@@ -59,6 +61,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                text-shadow: 2px 2px black;
             }
 
             .m-b-md {
@@ -81,6 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    Disc Golf Score Buddy
                 </div>
             </div>
         </div>

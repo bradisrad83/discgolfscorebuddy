@@ -26,8 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    //Defines the relationship between user and courses
+    //Defines the relationship between user and courses: Allows user to have many courses loaded
     public function courses() {
         return $this->hasMany(Courses::class);
     }
+
+    //Defines the relationship between user and rounds:  Allows user to have many rounds
+    public function rounds() {
+        return $this->hasMany(Rounds::class);
+    }
+
 }
