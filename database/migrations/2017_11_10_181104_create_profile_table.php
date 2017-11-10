@@ -19,7 +19,7 @@ class CreateProfileTable extends Migration
             $table->string('name');
             $table->integer('age')->nullable();
             $table->string('location')->nullable();
-            $table->integer('pdga#')->nullable();
+            $table->integer('pdgaNumber')->nullable();
             $table->string('sponsor')->nullable();
             $table->string('img_link')->nullable();
             $table->timestamps();
