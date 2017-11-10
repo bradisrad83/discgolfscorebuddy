@@ -51,6 +51,12 @@ class ProfileController extends Controller
         $sponsor=$request->get('sponsor');
 
         //Saving all the above data into our MySql Database
+        $user_profile=new Profile (['user_id'=>$user_id, 'name'=>$name, 'age'=>$age, 
+                        'location'=>$location, 'pdgaNumber'=>$pdgaNumber, 
+                        'sponsor'=>$sponsor])
+                    ->save();
+        
+        return redirect()->action("ProfileController@index");
     }
 
     /**
