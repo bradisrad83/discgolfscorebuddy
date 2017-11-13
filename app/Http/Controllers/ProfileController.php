@@ -43,18 +43,24 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         //Creates a profile for the newly registered user
-        $user_id=$request->user()->id;
-        $name=$request->get('name');
-        $age=$request->get('age');
-        $location=$request->get('location');
-        $pdgaNumber=$request->get('pdgaNumber');
-        $sponsor=$request->get('sponsor');
+        $user_id = $request->user()->id;
+        $name = $request->get('name');
+        $age = $request->get('age');
+        $location = $request->get('location');
+        $pdgaNumber = $request->get('pdgaNumber');
+        $sponsor = $request->get('sponsor');
 
         //Saving all the above data into our MySql Database
-        $user_profile=new Profile (['user_id'=>$user_id, 'name'=>$name, 'age'=>$age, 
-                        'location'=>$location, 'pdgaNumber'=>$pdgaNumber, 
-                        'sponsor'=>$sponsor])
-                    ->save();
+        $user_profile=new Profile ([
+            'user_id'=>             $user_id, 
+            'name'=>                $name, 
+            'age'=>                 $age,             
+            'location'=>            $location, 
+            'pdgaNumber'=>          $pdgaNumber, 
+            'sponsor'=>             $sponsor
+        
+        ]);
+        $user_profile->save();
         
         return redirect()->action("ProfileController@index");
     }
