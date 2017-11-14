@@ -11,7 +11,7 @@ class Profile extends Model
 
     //Defines the relationship between profile/user -> each profile belongs to a single user
     public function profile() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User');
     }
 
 

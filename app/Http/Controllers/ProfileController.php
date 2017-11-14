@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Profile;
+use App\Courses;
+use App\Rounds;
+use App\User;
+use App\Scorecard;
+use Storage;
 
 class ProfileController extends Controller
 {
@@ -60,6 +66,7 @@ class ProfileController extends Controller
             'sponsor'=>             $sponsor
         
         ]);
+
         $user_profile->save();
         
         return redirect()->action("ProfileController@index");
