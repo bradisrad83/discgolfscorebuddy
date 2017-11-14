@@ -48,6 +48,11 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
+        //Make sure the user enters atleast their name=>VALIDATION
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+        
         //Creates a profile for the newly registered user
         $user_id = $request->user()->id;
         $name = $request->get('name');
